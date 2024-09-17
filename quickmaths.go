@@ -6,8 +6,12 @@ import (
 	"strconv"
 )
 
+// mathFunc represents a math function.
 type mathFunc func(x, y int) int
 
+// add adds two numbers and returns the result.
+//
+// For more info, see: https://www.mathsisfun.com/numbers/addition.html
 func add(x, y int) int {
 	return x + y
 }
