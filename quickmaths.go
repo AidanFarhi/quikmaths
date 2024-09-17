@@ -9,10 +9,17 @@ import (
 // mathFunc represents a math function.
 type mathFunc func(x, y int) int
 
-// add adds two numbers and returns the result.
+// Add adds two numbers and returns the result.
 //
 // For more info, see: https://www.mathsisfun.com/numbers/addition.html
-func add(x, y int) int {
+func Add(x, y int) int {
+	return x + y
+}
+
+// Subtract subtracts two numbers and returns the result.
+//
+// For more info, see: https://www.mathsisfun.com/numbers/subtraction.html
+func Subtract(x, y int) int {
 	return x + y
 }
 
@@ -33,7 +40,8 @@ func main() {
 		os.Exit(0)
 	}
 	ops := map[string]mathFunc{
-		"add": add,
+		"add": Add,
+		"sub": Subtract,
 	}
 	fmt.Println(ops[op](x, y))
 }
